@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	name="T.I.M.E Stories"
+	id="c904355f-7774-43d1-ab8e-f48f0820ad48" 
+	octgnVersion="3.4.286.0"
+	scriptVersion ="3.1.0.2"
+	version="0.0.0.22"
+	markersize="16"
+	tags="AH LCG cooperative"
+	description="Protect the world from paradoxes with your team of time-traveling agents."
+	setsurl="http://google.com"
+	gameurl="http://google.com"
+	authors="KertanLeGnome"
+	iconurl="https://cf.geekdo-images.com/imagepage/img/evul1vzteA5QdbvAVeqaauIdziM=/fit-in/900x600/filters:no_upscale()/pic2617634.png"
+	usetwosidedtable="False">
+	<scripts>
+    	<script src="scripts/actions.py"/>
+	</scripts>
+	<events>
+		<event name="OnCardDoubleClicked" action="cardDoubleClicked"/>
+        <event name="OnDeckLoaded" action="deckLoaded"/>
+		<event name="OnGameStarted" action="startOfGame"/>
+	</events>
+	<fonts>
+	</fonts>
+	<proxygen definitionsrc="proxy/proxy.xml"/>
+	<phases>
+	</phases> 
+	<documents>
+	</documents>
+	<globalvariables>
+		<globalvariable name="timeCaptain" value=""/>
+        <globalvariable name="temporalUnit" value=""/>
+        <globalvariable name="game" value=""/>
+        <globalvariable name="phase" value="1"/>
+	</globalvariables>
+	<card back="cards/card.jpg" front="cards/card.jpg" width="75" height="106" cornerRadius="4">
+    <property name="Type" type="String" hidden="False" ignoreText="False" />
+    <property name="Phase" type="String" hidden="False" ignoreText="False" />
+    <property name="ElementNumber" type="String" hidden="False" ignoreText="False" />
+    <property name="LocationName" type="String" hidden="False" ignoreText="False" />
+    <property name="LocationSpace" type="String" hidden="False" ignoreText="False" />
+    <property name="Keep" type="String" hidden="False" ignoreText="False" />
+    <size name="CaptainDie" width="40" height="40" back="cards/card.jpg" front="cards/card.jpg" cornerRadius="4" backWidth="40" backHeight="40" />
+    <size name="AdventureDie" width="40" height="40" back="cards/card.jpg" front="cards/card.jpg" cornerRadius="4" backWidth="40" backHeight="40" />
+    <size name="ShieldSpot" width="40" height="40" back="cards/card.jpg" front="cards/card.jpg" cornerRadius="4" backWidth="40" backHeight="40" />
+    <size name="TUMarker" width="30" height="30" back="cards/card.jpg" front="cards/card.jpg" cornerRadius="4" backWidth="30" backHeight="30" />
+    <size name="ColorMarker" width="40" height="40" back="cards/card.jpg" front="cards/card.jpg" cornerRadius="4" backWidth="40" backHeight="40" />
+    <size name="PlayerMarker" width="30" height="30" back="cards/card.jpg" front="cards/card.jpg" cornerRadius="4" backWidth="30" backHeight="30" />
+    <size name="LocationMarker" width="30" height="30" back="cards/card.jpg" front="cards/card.jpg" cornerRadius="4" backWidth="30" backHeight="30" />
+	</card>
+	<markers>
+    <marker id="41d400f6-e161-4bd5-8d31-c1cd2265e6ab" name="Blue resource" src="Markers/TS_CreaPack_Icon_-JB-.png" />
+    <marker id="78046ffd-5cc4-4302-b888-363cc1deb970" name="Brown resource" src="Markers/TS_CreaPack_Icon_-JM-.png" />
+    <marker id="f35e8287-9cdf-4a76-96df-dd022fbd73d6" name="Yellow resource" src="Markers/TS_CreaPack_Icon_-JJ-.png" />
+    <marker id="c0bf6be1-0e75-4c2a-9f71-26928842c7d1" name="Green resource" src="Markers/TS_CreaPack_Icon_-JV-.png" />
+    <marker id="55f9aa93-3c04-4252-be76-c305020ea157" name="Life point" src="Markers/TS_CreaPack_Icon_-PV-.png" />
+    <marker id="99245f78-2c7b-4cb6-80c3-bdaafb973420" name="Normal shield" src="Markers/TS_CreaPack_Icon_-BB-.png" />
+    <marker id="18d254a4-dcea-4299-9732-de4685b16603" name="Skull shield" src="Markers/TS_CreaPack_Icon_-BCR-.png" />
+    <marker id="0fd97d30-4b30-4f3e-ada0-108b93572fc5" name="Time shield" src="Markers/TS_CreaPack_Icon_-BCB- copie 2.png" />
+    <marker id="8881d2fb-1d3f-43ec-a87b-366bac3f1310" name="Life shield" src="Markers/TS_CreaPack_Icon_-BN-.png" />
+    <marker id="ea978eb5-1e96-483f-8bed-46f0bddc8577" name="Special shield" src="Markers/TS_CreaPack_Icon_-B-.png" />
+    <marker id="0171d5b3-4fe0-468f-b323-25b0ff3ab3d5" name="Lock" src="Markers/62d688a4-46ef-45be-9414-2257a1221351.png" />
+	</markers>
+    <gameboards src="background/time-stories-board.png" x="-575" y="-268" width="1150" height="536">
+    </gameboards>
+  	<table name="Table" visibility="undefined" ordered="False" width="1150" height="536" background="background/background.jpg" backgroundStyle="uniformToFill">
+    <groupaction menu="Add Card" default="False" shortcut="ctrl+A" execute="createCard" />
+    <groupaction menu="Get element" default="False" shortcut="ctrl+E" execute="getElement" />
+    <groupaction menu="Set phase" default="False" shortcut="ctrl+P" execute="setPhase" />
+    <groupaction menu="Reset run" default="False" shortcut="ctrl+R" execute="resetRun" />
+    <groupaction menu="Open location" default="False" shortcut="ctrl+L" execute="openLocationAsk" />
+    <groupaction menu="Spend T.U." default="False" shortcut="F12" execute="spendTU" />
+    <groupaction menu="Add T.U." default="False" shortcut="shift+F12" execute="addTU" />
+    <groupaction menu="Set T.U." default="False" execute="setTU" />
+    <cardaction menu="Add life point" default="False" shortcut="shift+F1" execute="addLife" />
+    <cardaction menu="Remove life point" default="False" shortcut="ctrl+F1" execute="removeLife" />
+    <cardaction menu="Set keep" default="False" shortcut="ctrl+K" execute="setKeep" />
+    <cardaction menu="Remove keep" default="False" execute="removeKeep" />
+    <cardaction menu="Delete" default="False" shortcut="Del" execute="delete" />
+	<cardactions menu="Add Ressource">
+	<cardaction menu="Add blue" default="False" shortcut="shift+F2" execute="addBlue" />
+	<cardaction menu="Add green" default="False" shortcut="shift+F3" execute="addGreen" />
+	<cardaction menu="Add yellow" default="False" shortcut="shift+F4" execute="addYellow" />
+	<cardaction menu="Add brown" default="False" shortcut="shift+F5" execute="addBrown" />
+	</cardactions>
+    <cardactions menu="Remove ressource">
+    <cardaction menu="Remove blue" default="False" shortcut="ctrl+F2" execute="removeBlue" />
+    <cardaction menu="Remove green" default="False" shortcut="ctrl+F3" execute="removeGreen" />
+    <cardaction menu="Remove yellow" default="False" shortcut="ctrl+F4" execute="removeYellow" />
+    <cardaction menu="Remove brown" default="False" shortcut="ctrl+F5" execute="removeBrown" />
+    </cardactions>
+    <cardactions menu="Add shield">
+    <cardaction menu="Add normal shield" default="False" shortcut="shift+F6" execute="addNormalShield" />
+    <cardaction menu="Add skull shield" default="False" shortcut="shift+F7" execute="addSkullShield" />
+    <cardaction menu="Add time shield" default="False" shortcut="shift+F8" execute="addTimeShield" />
+    <cardaction menu="Add life shield" default="False" shortcut="shift+F9" execute="addLifeShield" />
+    <cardaction menu="Add special shield" default="False" shortcut="shift+F10" execute="addSpecialShield" />
+    </cardactions>
+    <cardactions menu="Remove shield">
+    <cardaction menu="Remove normal shield" default="False" shortcut="ctrl+F6" execute="removeNormalShield" />
+    <cardaction menu="Remove skull shield" default="False" shortcut="ctrl+F7" execute="removeSkullShield" />
+    <cardaction menu="Remove time shield" default="False" shortcut="ctrl+F8" execute="removeTimeShield" />
+    <cardaction menu="Remove life shield" default="False" shortcut="ctrl+F9" execute="removeLifeShield" />
+    <cardaction menu="Remove special shield" default="False" shortcut="ctrl+F10" execute="removeSpecialShield" />
+    </cardactions>
+		<cardaction menu="Flip Card" default="False" shortcut="ctrl+F" execute="flipcard" />
+		<cardaction menu="Lock" default="False" shortcut="ctrl+K" execute="lockCard" />
+		<cardaction menu="Rotate Left" default="False" shortcut="ctrl+L" execute="rotateLeft" />
+		<cardaction menu="Rotate Right" default="False" shortcut="ctrl+R" execute="rotateRight" /> 
+	</table>
+	<player summary="Hand:{#Hand}">
+		<globalvariable name="playerID" value="" />
+        <group name="Hand" visibility="me" ordered="False" icon="groups/hand.png" viewState="expanded">
+			<cardaction menu="Flip Card" default="False" shortcut="ctrl+F" execute="flipcard" />
+             <cardaction menu="Set keep" default="False" shortcut="ctrl+K" execute="setKeep" />
+		</group>
+	</player>
+    <shared>
+        <group name="Elements" visibility="all" ordered="True" icon="groups/hand.png" collapsed="False">
+		</group>
+        <group name="Locations" visibility="all" ordered="True" icon="groups/hand.png" collapsed="True">
+		</group>
+        <group name="Codex 1" visibility="all" ordered="True" icon="groups/hand.png" collapsed="False">
+		</group>
+        <group name="Codex 2" visibility="all" ordered="True" icon="groups/hand.png" collapsed="False">
+		</group>
+		<group name="Codex 3" visibility="all" ordered="True" icon="groups/hand.png" collapsed="False">
+		</group>
+        <group name="Codex 4" visibility="all" ordered="True" icon="groups/hand.png" collapsed="False">
+		</group>
+        <group name="Codex 5" visibility="all" ordered="True" icon="groups/hand.png" collapsed="True">
+		</group>
+		<group name="Codex 6" visibility="all" ordered="True" icon="groups/hand.png" collapsed="True">
+		</group>
+		<group name="Conclusion" visibility="all" ordered="True" icon="groups/hand.png" collapsed="False">
+		</group>
+        <group name="Color Marker" visibility="all" ordered="True" icon="groups/hand.png" collapsed="False">
+		</group>
+        <group name="Receptacle" visibility="all" ordered="True" icon="groups/hand.png" collapsed="False">
+		</group>
+        <group name="Adventure die" visibility="all" ordered="True" icon="groups/hand.png" collapsed="True">
+		</group>
+		<group name="Captain die" visibility="all" ordered="True" icon="groups/hand.png" collapsed="True">
+		</group>
+		<group name="Reminder" visibility="all" ordered="True" icon="groups/hand.png" collapsed="True">
+		</group>
+        <group name="Plan" visibility="all" ordered="True" icon="groups/hand.png" collapsed="True">
+		</group>
+		<group name="Setup" visibility="all" ordered="True" icon="groups/hand.png" collapsed="True">
+		</group>
+		<group name="Removed card" visibility="all" ordered="True" icon="groups/hand.png" collapsed="True">
+		</group>
+	</shared>
+	<deck>
+		<section name="Hand" group="Hand" />
+	</deck>
+	<sharedDeck>
+		<section name="Elements" group="Elements" />
+		<section name="Locations" group="Locations" />
+        <section name="Plan" group="Plan" />
+		<section name="Codex 1" group="Codex 1" />
+        <section name="Codex 2" group="Codex 2" />
+        <section name="Codex 3" group="Codex 3" />
+        <section name="Codex 4" group="Codex 4" />
+        <section name="Codex 5" group="Codex 5" />
+        <section name="Codex 6" group="Codex 6" />
+		<section name="Conclusion" group="Conclusion" />
+        <section name="Reminder" group="Reminder" />
+        <section name="Receptacle" group="Receptacle" />
+        <section name="Captain die" group="Captain die" />	
+		<section name="Adventure die" group="Adventure die" />		
+		<section name="Color Marker" group="Color Marker" />
+		<section name="Setup" group="Setup" />
+        <section name="Removed card" group="Removed card" />
+	</sharedDeck>
+</game>

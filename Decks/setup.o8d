@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="b556ffa8-eef5-44c4-af68-016911577a28" sleeveid="0">
+    <section name="Hand" shared="False" />
+    <section name="Elements" shared="True" />
+	<section name="Locations" shared="True" />
+	<section name="Codex 1" shared="True" />
+    <section name="Codex 2" shared="True" />
+    <section name="Codex 3" shared="True" />
+    <section name="Codex 4" shared="True" />
+    <section name="Codex 5" shared="True" />
+    <section name="Codex 6" shared="True" />
+	<section name="Conclusion" shared="True" />
+    <section name="Reminder" shared="True" />
+    <section name="Receptacle" shared="True" />
+    <section name="Captain die" shared="True" >
+    <card qty="1" id="76dce78b-5c8e-4f25-810e-25a1be50130e"></card>
+    <card qty="1" id="334d5cc6-4f1f-4925-9d18-08fa09b3677b"></card>
+    <card qty="1" id="5da9b8a4-4177-46c4-b789-759b801cb6e8"></card>
+    <card qty="1" id="172de10a-44e2-4a63-a758-92ef23d3b027"></card>
+    <card qty="1" id="a87b43cd-d1cc-4587-b180-c4165ba3362a"></card>
+    <card qty="1" id="6ad20b2e-5c80-43ad-8349-3b13814dcd4a"></card>	
+     </section>
+	<section name="Adventure die" shared="True" >	
+    <card qty="1" id="72a4d307-4552-4b5e-ad18-ee486a2b2662"></card>
+    <card qty="1" id="6b148ce3-ca8f-4488-a598-40565713c139"></card>
+    <card qty="1" id="1f557795-9b7f-4672-90b5-c604d225e26a"></card>
+    <card qty="1" id="8c7e2bfa-5d0c-45a2-99e8-24a3ae3f55fa"></card>
+    <card qty="1" id="f1e0da26-09fb-4b28-b01d-56e8d3748426"></card>
+    <card qty="1" id="fc155210-0ec4-4b87-b036-a7879ace0263"></card>
+      </section>	
+	<section name="Color Marker" shared="True" >
+        <card qty="1" id="22d1b7f6-9203-4787-a4f7-fafb0c09dc92"></card>
+    <card qty="1" id="6b057625-5390-4c2b-856b-8b5e3fa94850"></card>
+    <card qty="1" id="377cc5b0-f6af-43fb-a75d-b90ab29f975a"></card>
+    <card qty="1" id="f1197214-7b9b-4c88-9844-d3c22d3a2763"></card>
+    <card qty="1" id="2489459e-3a15-4f9e-bae1-d558dbedea80"></card>
+    <card qty="1" id="dd36cf04-bc17-4b1e-b1cc-0bf9f4336757"></card>
+        <card qty="1" id="5e469b81-ff2c-4ed8-8fb1-97c081bb8311"></card>
+    <card qty="1" id="bc4e1907-1e95-442b-a2eb-0b2f2f929299"></card>
+    <card qty="1" id="ea914273-bf70-44db-afbe-192908d030b7"></card>
+    <card qty="1" id="d4805eb9-a192-4db3-b3fe-2e671abb8892"></card>
+    <card qty="1" id="552a4797-4ae2-4582-b9c4-b617c61a7aa1"></card>
+    <card qty="1" id="d1e9c163-c0a1-4c19-8972-e448c1466165"></card>
+        <card qty="1" id="bff59335-22f2-4af9-83ed-f5eaa634e3c8"></card>
+    <card qty="1" id="f423b398-299e-4777-b538-3219b3c8b228"></card>
+    <card qty="1" id="cae1c2c8-74f2-4849-a51c-388909ea4201"></card>
+    <card qty="1" id="2501670e-359f-4651-901b-4ba889d7ea0c"></card>
+    <card qty="1" id="c2699b2d-80f3-4139-a035-9f8adf886198"></card>
+    <card qty="1" id="51eaa623-93a4-4000-8d7f-4464cbb7caa0"></card>
+        <card qty="1" id="ac4f9435-70ce-4791-ba13-21a4469b3cbc"></card>
+    <card qty="1" id="a5361488-2a88-4b63-ab19-4dee06d26fd3"></card>
+    <card qty="1" id="b15a41f8-3e33-4a25-8ea6-9f4288c84336"></card>
+    <card qty="1" id="32adff1d-5d58-44a0-a441-0c7e7112ff08"></card>
+    <card qty="1" id="7b8e28a7-0b23-4968-b918-909166bc9c36"></card>
+    <card qty="1" id="c50f3bb3-bd5f-42b0-8891-1ac25b5fec9b"></card>
+    
+          </section>
+	<section name="Setup" shared="True">
+     <card qty="21" id="735b0348-6bb6-4a12-98e2-2a9f9b640369"></card>
+     <card qty="1" id="dd54316f-7cf3-4b61-85c0-f4a54b52b4d4"></card>
+     <card qty="1" id="977df95c-4cee-4605-9fa8-65c57613feaa"></card>
+     <card qty="1" id="f7663543-602a-4f6a-b71b-9dea89a243a0"></card>
+     <card qty="1" id="cfe932ae-4083-479f-9429-8283813d6d16"></card>
+     <card qty="1" id="d07031ad-58eb-4dea-9570-00e69f2bfd21"></card>
+     <card qty="1" id="a915fc5f-79f0-4c6f-8c7d-3e90879dd360"></card>
+      </section>
+    
+ 
+
+
+  <notes><![CDATA[]]></notes>
+</deck>
